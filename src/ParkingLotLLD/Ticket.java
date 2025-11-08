@@ -14,7 +14,7 @@ public class Ticket {
         this.parkingSpot = parkingSpot;
         this.vehicle = vehicle;
         this.entryTime = entryTime;
-        parkingSpot.setAvailable(true);
+        parkingSpot.setAvailable(false);
     }
 
     public LocalDateTime getEntryTime() {

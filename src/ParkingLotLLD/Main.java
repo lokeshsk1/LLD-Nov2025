@@ -23,7 +23,7 @@ public class Main {
         System.out.println(ticket1);
 
         //3. Vehicle Exits
-        parkingLotManager.exitVehicle(ticket1);
+        parkingLotManager.exitVehicle(vehicle1);
         System.out.println(ticket1);
 
 
