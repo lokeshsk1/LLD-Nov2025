@@ -12,7 +12,7 @@ public class ParkingLotManager {
         this.parkingLot = parkingLot;
     }
 
-    private Map<String, Ticket> vehicleVsTicket = new HashMap<>();
+    private final Map<String, Ticket> vehicleVsTicket = new HashMap<>();
 
     public Ticket createTicket(long ticketId, ParkingSpot parkingSpot, Vehicle vehicle, LocalDateTime entryTime) {
         parkingSpot.setVehicle(vehicle);
@@ -28,6 +28,7 @@ public class ParkingLotManager {
         ParkingSpot parkingSpot = ticket.getParkingSpot();
         parkingSpot.setAvailable(true);
         parkingSpot.setVehicle(null);
+        vehicleVsTicket.remove(vehicle.getRegNo());
     }
 
     public ParkingSpot getAvailableParkingSpot(Vehicle vehicle){

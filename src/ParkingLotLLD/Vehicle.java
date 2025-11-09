@@ -1,8 +1,8 @@
 package ParkingLotLLD;
 
 public class Vehicle {
-    String regNo;
-    VehicleType type;
+    private String regNo;
+    private VehicleType type;
 
     public Vehicle(String regNo, VehicleType type) {
         this.regNo = regNo;
